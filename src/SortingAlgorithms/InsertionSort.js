@@ -27,7 +27,7 @@ function insertionSort(mainArray, animations) {
       swap(mainArray, j, j - 1);
       // Decrement j to continue checking the previous elements
       j--;
-
+      // adds animation to highlight comparing previous elements
       if (j > 0){
         animations.push(["compare", j - 1, j]);
         animations.push(["revert", j - 1, j]);
