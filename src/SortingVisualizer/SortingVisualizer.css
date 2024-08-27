@@ -1,7 +1,17 @@
+body{
+  background: black;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center; 
+}
+
+#name-holder{
+  height: 20px;
+  color: white;
+  padding-bottom: 5px;
 }
 
 .array-container {
