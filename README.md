@@ -20,7 +20,7 @@ cd Sorting-Algorithm-Visualizer
 ```
 Install Dependencies Make sure you have Node.js installed, then run:
 ```bash
-npm instal
+npm install
 ```
 Start the Application
 ```bash
