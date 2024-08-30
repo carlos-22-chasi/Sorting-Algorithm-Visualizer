@@ -28,6 +28,8 @@ npm start
 ```
 The application will open in your default browser at http://localhost:3000.
 
+![Screen shot of how the webpate will look like](public/final.png)
+
 # Usage
 - Generate New Array: Click on the "Generate New Array" button to create a new random array.
 - Select an Algorithm: Click on any of the sorting algorithm buttons to visualize the sorting process.
