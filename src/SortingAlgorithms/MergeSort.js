@@ -49,10 +49,6 @@ function merge(mainArray, startIdx, middleIdx, endIdx, auxiliaryArray, animation
 
   // Handle remaining elements in the left half
   while (i <= middleIdx) {
-    // These are the indexes that we're comparing; we push them once to change their color.
-    animations.push(["compare", i, i]);
-    // These are the indexes that we're comparing; we push them a second time to revert their color.
-    animations.push(["revert", i, i]);
     // Overwrite the value in the main array with the value from the auxiliary array
     animations.push(["overwrite", k, auxiliaryArray[i]]);
     mainArray[k++] = auxiliaryArray[i++];
@@ -60,10 +56,6 @@ function merge(mainArray, startIdx, middleIdx, endIdx, auxiliaryArray, animation
 
   // Handle remaining elements in the right half
   while (j <= endIdx) {
-    // These are the indexes that we're comparing; we push them once to change their color.
-    animations.push(["compare", j, j]);
-    // These are the indexes that we're comparing; we push them a second time to revert their color.
-    animations.push(["revert", j, j]);
     // Overwrite the value in the main array with the value from the auxiliary array
     animations.push(["overwrite", k, auxiliaryArray[j]]);
     mainArray[k++] = auxiliaryArray[j++];

@@ -38,15 +38,20 @@ function partition(mainArray, startIdx, endIdx, animations) {
     if (mainArray[j] <= pivot) {
       i++; // Move the smaller element index to the right
       // Push swap animation (swap the elements in the array)
-      animations.push(["swap", i, mainArray[j], j, mainArray[i]]);
-      // Swap the elements in the array
-      swap(mainArray, i, j);
+      if(i !== j){
+        animations.push(["swap", i, mainArray[j], j, mainArray[i]]);
+        // Swap the elements in the array
+        swap(mainArray, i, j);
+      }
     }
   }
   // After the loop, place the pivot in its correct position in the array
-  animations.push(["swap", i + 1, mainArray[endIdx], endIdx, mainArray[i + 1]]);
-  // Perform the final swap to position the pivot correctly
-  swap(mainArray, i + 1, endIdx);
+  if(i + 1 !== endIdx){
+    animations.push(["swap", i + 1, mainArray[endIdx], endIdx, mainArray[i + 1]]);
+    // Perform the final swap to position the pivot correctly
+    swap(mainArray, i + 1, endIdx);
+}
+  
   // Return the index of the pivot element
   return i + 1;
 }

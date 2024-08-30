@@ -31,10 +31,8 @@ function radixSort(mainArray, animations) {
 function countSort(mainArray, exp, animations) {
   const length = mainArray.length;
   let sorted = Array(length);
-  console.log("output: ", sorted);
   //initialize count array to all zeros. This will count the amount of times we see each digit between 0-9
   let count = Array(10).fill(0, 0);
-  console.log("count: ", count);
 
   // Store count of occurrences in count[]
   for (let i = 0; i < length; i++) {
